@@ -1,15 +1,30 @@
 defmodule ExAws.DirectConnect.MixProject do
   use Mix.Project
 
+  @version "1.0.0"
+
   def project do
     [
       app: :ex_aws_direct_connect,
+      version: @version,
       version: "0.1.0",
       elixir: "~> 1.7",
+      elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      source_url: "https://github.com/JustinTangg/ex_aws_direct_connect",
+      homepage_url: "https://github.com/JustinTangg/ex_aws_direct_connect",
+      package: package(),
+      docs: [
+        main: "readme",
+        extras: ["README.mx"],
+        source_ref: "v#{@version}"
+      ]
     ]
   end
+
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_), do: ["lib"]
 
   # Run "mix help compile.app" to learn about applications.
   def application do
@@ -27,6 +42,15 @@ defmodule ExAws.DirectConnect.MixProject do
       {:ex_doc, "~> 0.19.2", only: [:dev, :test]},
       {:ex_aws, "~> 2.0"},
       {:jason, "~> 1.1.2"}
+    ]
+  end
+
+  defp package do
+    [
+      description: "AWS Elasticsearch service for ex_aws",
+      maintainers: ["Justin Tang"],
+      licenses: ["MIT"],
+      links: %{github: "https://github.com/JustinTangg/ex_aws_direct_connect"}
     ]
   end
 end

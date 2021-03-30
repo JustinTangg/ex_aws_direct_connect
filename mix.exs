@@ -17,7 +17,7 @@ defmodule ExAws.DirectConnect.MixProject do
       package: package(),
       docs: [
         main: "readme",
-        extras: ["README.mx"],
+        extras: ["README.md"],
         source_ref: "v#{@version}"
       ]
     ]

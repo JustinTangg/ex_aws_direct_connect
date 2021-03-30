@@ -47,7 +47,7 @@ defmodule ExAws.DirectConnect.MixProject do
 
   defp package do
     [
-      description: "AWS Elasticsearch service for ex_aws",
+      description: "AWS Direct Connect service for ex_aws",
       maintainers: ["Justin Tang"],
       licenses: ["MIT"],
       links: %{github: "https://github.com/JustinTangg/ex_aws_direct_connect"}

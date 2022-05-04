@@ -41,7 +41,7 @@ defmodule ExAws.DirectConnect.MixProject do
       {:poison, ">= 1.2.0", optional: true},
       {:ex_doc, "~> 0.19.2", only: [:dev, :test]},
       {:ex_aws, "~> 2.0"},
-      {:jason, "~> 1.1.2"}
+      {:jason, "~> 1.2"}
     ]
   end
 
